@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		275A14C329A65CCB00F8D783 /* TaskListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275A14C229A65CCB00F8D783 /* TaskListApp.swift */; };
-		275A14C529A65CCB00F8D783 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275A14C429A65CCB00F8D783 /* ContentView.swift */; };
+		275A14C529A65CCB00F8D783 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275A14C429A65CCB00F8D783 /* HomeView.swift */; };
 		275A14C729A65CCD00F8D783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 275A14C629A65CCD00F8D783 /* Assets.xcassets */; };
 		275A14CA29A65CCD00F8D783 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 275A14C929A65CCD00F8D783 /* Preview Assets.xcassets */; };
+		275A14D329A65E5300F8D783 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275A14D229A65E5300F8D783 /* HomeViewModel.swift */; };
+		275A14D629A65EBB00F8D783 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275A14D529A65EBB00F8D783 /* TaskModel.swift */; };
+		275A14D929A6602F00F8D783 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275A14D829A6602F00F8D783 /* HTTPClient.swift */; };
+		277418DD29A67E26005A5AAC /* ListElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277418DC29A67E26005A5AAC /* ListElement.swift */; };
+		277475AD29A783E000D743BD /* TaskDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277475AC29A783E000D743BD /* TaskDetailsView.swift */; };
+		27E914A329A7A12600DFB4A7 /* AddElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E914A229A7A12600DFB4A7 /* AddElementView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		275A14BF29A65CCB00F8D783 /* TaskList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		275A14C229A65CCB00F8D783 /* TaskListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListApp.swift; sourceTree = "<group>"; };
-		275A14C429A65CCB00F8D783 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		275A14C429A65CCB00F8D783 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		275A14C629A65CCD00F8D783 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		275A14C929A65CCD00F8D783 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		275A14D229A65E5300F8D783 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		275A14D529A65EBB00F8D783 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		275A14D829A6602F00F8D783 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		277418DC29A67E26005A5AAC /* ListElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListElement.swift; sourceTree = "<group>"; };
+		277475AC29A783E000D743BD /* TaskDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailsView.swift; sourceTree = "<group>"; };
+		27E914A229A7A12600DFB4A7 /* AddElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddElementView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +63,11 @@
 		275A14C129A65CCB00F8D783 /* TaskList */ = {
 			isa = PBXGroup;
 			children = (
+				275A14D729A6602200F8D783 /* Utilities */,
+				275A14D429A65EB500F8D783 /* Model */,
+				275A14D129A65DD400F8D783 /* ViewModel */,
+				275A14D029A65DC800F8D783 /* Views */,
 				275A14C229A65CCB00F8D783 /* TaskListApp.swift */,
-				275A14C429A65CCB00F8D783 /* ContentView.swift */,
 				275A14C629A65CCD00F8D783 /* Assets.xcassets */,
 				275A14C829A65CCD00F8D783 /* Preview Content */,
 			);
@@ -65,6 +80,49 @@
 				275A14C929A65CCD00F8D783 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		275A14D029A65DC800F8D783 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				277418DB29A67E11005A5AAC /* Components */,
+				275A14C429A65CCB00F8D783 /* HomeView.swift */,
+				277475AC29A783E000D743BD /* TaskDetailsView.swift */,
+				27E914A229A7A12600DFB4A7 /* AddElementView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		275A14D129A65DD400F8D783 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				275A14D229A65E5300F8D783 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		275A14D429A65EB500F8D783 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				275A14D529A65EBB00F8D783 /* TaskModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		275A14D729A6602200F8D783 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				275A14D829A6602F00F8D783 /* HTTPClient.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		277418DB29A67E11005A5AAC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				277418DC29A67E26005A5AAC /* ListElement.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +195,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				275A14C529A65CCB00F8D783 /* ContentView.swift in Sources */,
+				275A14D629A65EBB00F8D783 /* TaskModel.swift in Sources */,
+				277475AD29A783E000D743BD /* TaskDetailsView.swift in Sources */,
+				275A14D929A6602F00F8D783 /* HTTPClient.swift in Sources */,
+				277418DD29A67E26005A5AAC /* ListElement.swift in Sources */,
+				275A14C529A65CCB00F8D783 /* HomeView.swift in Sources */,
+				27E914A329A7A12600DFB4A7 /* AddElementView.swift in Sources */,
+				275A14D329A65E5300F8D783 /* HomeViewModel.swift in Sources */,
 				275A14C329A65CCB00F8D783 /* TaskListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

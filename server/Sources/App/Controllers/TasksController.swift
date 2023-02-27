@@ -8,7 +8,6 @@
 import Vapor
 import Fluent
 
-
 struct TasksController: RouteCollection{
     func boot(routes: Vapor.RoutesBuilder) throws {
         //Rotas base
@@ -25,7 +24,8 @@ struct TasksController: RouteCollection{
     
     func index(req: Request) async throws -> [Task]{
         let allTasks = try await Task.query(on: req.db).all()
-        return allTasks
+        let sortedAllTasks = allTasks.sorted(by: {$0.priority > $1.priority})
+        return sortedAllTasks
     }
     
     func create(req: Request) throws -> EventLoopFuture<HTTPStatus>{
